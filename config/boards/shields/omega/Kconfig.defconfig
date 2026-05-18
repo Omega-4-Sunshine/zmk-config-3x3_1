@@ -1,0 +1,6 @@
+if SHIELD_OMEGA
+
+config ZMK_KEYBOARD_NAME
+    default "omega"
+
+endif
