@@ -9,7 +9,9 @@
             #binding-cells = <0>;
             bindings 
                 = <&macro_tap &kp LG(SPACE)>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 150>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 10>
                 , <&macro_tap &kp D &kp I &kp S &kp C &kp O &kp R &kp D>
                 , <&macro_wait_time 200>
                 , <&macro_tap &kp ENTER>
