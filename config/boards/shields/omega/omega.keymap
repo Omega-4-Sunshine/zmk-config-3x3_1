@@ -17,13 +17,34 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
+        open_youtube: open_youtube {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings 
+                = <&macro_tap &kp LG(SPACE)>
+                , <&macro_wait_time 150>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 10>
+                , <&macro_tap &kp C &kp H &kp R &kp O &kp M &kp E>
+                , <&macro_wait_time 150>
+                , <&macro_tap &kp ENTER>
+                , <&macro_wait_time 600>
+                , <&macro_tap &kp LG(T)>
+                , <&macro_wait_time 150>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 10>
+                , <&macro_tap &kp Y &kp O &kp U &kp T &kp U &kp B &kp E &kp DOT &kp C &kp O &kp M>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &open_discord  &kp N2  &kp N3
+                &open_discord  &open_youtube  &kp N3
                 &kp N4         &kp N5  &kp N6
                 &kp N7         &kp N8  &mo 1
             >;
