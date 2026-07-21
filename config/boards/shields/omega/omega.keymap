@@ -20,14 +20,14 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            bindings = 
+            bindings = <
                 &open_discord  &kp N2  &kp N3
                 &kp N4         &kp N5  &kp N6
                 &kp N7         &kp N8  &mo 1
             >;
         };
         bt_layer {
-            bindings = 
+            bindings = <
                 &none   &none   &bootloader
                 &none   &none   &bt BT_CLR
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
