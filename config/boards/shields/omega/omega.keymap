@@ -72,14 +72,14 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            bindings = 
+            bindings = <
                 &kp LG(Y)      &kp LG(LS(Y))   &kp LG(S)
                 &open_youtube  &open_discord   &open_spotify
                 &open_finder   &kp LG(M)       &mo 1
             >;
         };
         bt_layer {
-            bindings = 
+            bindings = <
                 &none   &none   &bootloader
                 &none   &none   &bt BT_CLR
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
