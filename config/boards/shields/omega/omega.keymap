@@ -7,9 +7,9 @@
         open_discord: open_discord {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings 
+            bindings
                 = <&macro_tap &kp LG(SPACE)>
-                , <&macro_wait_time 150>
+                , <&macro_wait_time 300>
                 , <&macro_tap_time 10>
                 , <&macro_wait_time 10>
                 , <&macro_tap &kp D &kp I &kp S &kp C &kp O &kp R &kp D>
@@ -17,24 +17,53 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
+
         open_youtube: open_youtube {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings 
+            bindings
                 = <&macro_tap &kp LG(SPACE)>
-                , <&macro_wait_time 150>
+                , <&macro_wait_time 300>
                 , <&macro_tap_time 10>
                 , <&macro_wait_time 10>
                 , <&macro_tap &kp C &kp H &kp R &kp O &kp M &kp E>
-                , <&macro_wait_time 150>
+                , <&macro_wait_time 200>
                 , <&macro_tap &kp ENTER>
-                , <&macro_wait_time 600>
+                , <&macro_wait_time 800>
                 , <&macro_tap &kp LG(T)>
-                , <&macro_wait_time 150>
+                , <&macro_wait_time 200>
                 , <&macro_tap_time 10>
                 , <&macro_wait_time 10>
                 , <&macro_tap &kp Z &kp O &kp U &kp T &kp U &kp B &kp E &kp DOT &kp C &kp O &kp M>
                 , <&macro_wait_time 100>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
+
+        open_spotify: open_spotify {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LG(SPACE)>
+                , <&macro_wait_time 300>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 10>
+                , <&macro_tap &kp S &kp P &kp O &kp T &kp I &kp F &kp Z>
+                , <&macro_wait_time 200>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
+
+        open_finder: open_finder {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LG(SPACE)>
+                , <&macro_wait_time 300>
+                , <&macro_tap_time 10>
+                , <&macro_wait_time 10>
+                , <&macro_tap &kp F &kp I &kp N &kp D &kp E &kp R>
+                , <&macro_wait_time 200>
                 , <&macro_tap &kp ENTER>
                 ;
         };
@@ -43,14 +72,14 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            bindings = <
-                &open_discord  &open_youtube  &kp N3
-                &kp N4         &kp N5  &kp N6
-                &kp N7         &kp N8  &mo 1
+            bindings = 
+                &kp LG(Y)      &kp LG(LS(Y))   &kp LG(S)
+                &open_youtube  &open_discord   &open_spotify
+                &open_finder   &kp LG(M)       &mo 1
             >;
         };
         bt_layer {
-            bindings = <
+            bindings = 
                 &none   &none   &bootloader
                 &none   &none   &bt BT_CLR
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
